@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const testURL = "http://localhost:8000";
+const testURL = "https://mysterious-spire-72701.herokuapp.com/";
 let postObj = {
   method: "POST",
   headers: {
