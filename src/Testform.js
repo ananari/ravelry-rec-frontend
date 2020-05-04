@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const testURL = "https://mysterious-spire-72701.herokuapp.com/";
+const testURL = "https://mysterious-spire-72701.herokuapp.com";
 let postObj = {
   method: "POST",
   headers: {
@@ -40,7 +40,7 @@ export default class Testform extends Component {
           <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
           <input type="submit" />
         </form>
-        <p>{this.state.result}</p>
+        {this.state.result ? <a href={this.state.result} target="_blank" rel="noopener noreferrer">{this.state.result}</a> : null}
       </div>
     )
   }
