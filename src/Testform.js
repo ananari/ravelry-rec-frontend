@@ -14,7 +14,8 @@ export default class Testform extends Component {
     super();
     this.state = {
       query: "",
-      result: ""
+      result: "",
+      error: ""
     }
   }
 
@@ -41,6 +42,7 @@ export default class Testform extends Component {
           <input type="submit" />
         </form>
         {this.state.result ? <a href={this.state.result} target="_blank" rel="noopener noreferrer">{this.state.result}</a> : null}
+        {this.state.error ? <p>{this.state.error}</p> : null}
       </div>
     )
   }
