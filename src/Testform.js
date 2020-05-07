@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Testform.css'
 
 const testURL = "https://mysterious-spire-72701.herokuapp.com";
 let postObj = {
@@ -36,7 +37,7 @@ export default class Testform extends Component {
 
   render(){
     return(
-      <div>
+      <div className="searchbar">
         <form onSubmit={event => this.handleSubmit(event)}>
           <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
           <input type="submit" />

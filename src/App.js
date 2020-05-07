@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.css';
 import Testform from './Testform'
+import Titlebar from './Titlebar'
 
 function App() {
   return (
-    <Testform />
+    <>
+      <Titlebar />
+      <Testform />
+    </>
   );
 }
 
