@@ -44,7 +44,7 @@ export default class Testform extends Component {
              URL in the search bar and press "Find similar patterns" to receive a URL containing links to similar patterns.</p>
         </div>
         <div>
-          <form onSubmit={event => this.handleSubmit(event)}>
+          <form className="searchform" onSubmit={event => this.handleSubmit(event)}>
             <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
             <input type="submit" value="Find similar patterns"/>
           </form>

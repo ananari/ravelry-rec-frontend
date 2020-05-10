@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.searchform {
+  margin: 10px;
+}
+
 .text {
   width: 50%;
   text-align: center;
