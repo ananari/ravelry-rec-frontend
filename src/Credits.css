@@ -1,0 +1,10 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: 10px 10px;
+}
+
+footer a {
+  color: darkorchid;
+  text-decoration: none;
+}

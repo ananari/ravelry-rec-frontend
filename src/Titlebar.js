@@ -3,9 +3,9 @@ import './Titlebar.css'
 export default class Titlebar extends Component {
   render(){
     return(
-      <div className="header">
+      <header className="header">
         <a className="title" href="https://pure-peak-95236.herokuapp.com/"><h1>Similar pattern finder</h1></a>
-      </div>
+      </header>
     )
   }
 }
