@@ -25,6 +25,7 @@ export default class Testform extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
+    this.setState({error: "Loading..."})
     console.log(this.state.query)
     let formData = new FormData();
     formData.append("query", this.state.query)
@@ -38,7 +39,7 @@ export default class Testform extends Component {
   render(){
     return(
       <div className="searchbar">
-        <div className="infotext">
+        <div className="text">
           <p>Welcome! This website will help you find similar Ravelry patterns to a given pattern. Simply enter a Ravelry pattern
              URL in the search bar and press "Find similar patterns" to receive a URL containing links to similar patterns.</p>
         </div>
@@ -47,6 +48,8 @@ export default class Testform extends Component {
             <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
             <input type="submit" value="Find similar patterns"/>
           </form>
+        </div>
+        <div className="text">
           {this.state.result ? <a href={this.state.result} target="_blank" rel="noopener noreferrer">{this.state.result}</a> : null}
           {this.state.error ? <p>{this.state.error}</p> : null}
         </div>

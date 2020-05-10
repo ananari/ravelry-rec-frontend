@@ -4,7 +4,7 @@ export default class Titlebar extends Component {
   render(){
     return(
       <div className="header">
-        <h1>Similar pattern finder</h1>
+        <a href="https://pure-peak-95236.herokuapp.com/"><h1>Similar pattern finder</h1></a>
       </div>
     )
   }
