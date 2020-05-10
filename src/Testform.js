@@ -38,12 +38,18 @@ export default class Testform extends Component {
   render(){
     return(
       <div className="searchbar">
-        <form onSubmit={event => this.handleSubmit(event)}>
-          <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
-          <input type="submit" />
-        </form>
-        {this.state.result ? <a href={this.state.result} target="_blank" rel="noopener noreferrer">{this.state.result}</a> : null}
-        {this.state.error ? <p>{this.state.error}</p> : null}
+        <div className="infotext">
+          <p>Welcome! This website will help you find similar Ravelry patterns to a given pattern. Simply enter a Ravelry pattern
+             URL in the search bar and press "Find similar patterns" to receive a URL containing links to similar patterns.</p>
+        </div>
+        <div>
+          <form onSubmit={event => this.handleSubmit(event)}>
+            <input type="textarea" name="query" value={this.state.query} onChange={event => this.handleChange(event)}/>
+            <input type="submit" value="Find similar patterns"/>
+          </form>
+          {this.state.result ? <a href={this.state.result} target="_blank" rel="noopener noreferrer">{this.state.result}</a> : null}
+          {this.state.error ? <p>{this.state.error}</p> : null}
+        </div>
       </div>
     )
   }
